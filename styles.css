@@ -1,66 +1,148 @@
 /* Общие стили */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    background-color: black;
+    color: white;
 }
 
 header {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
     position: fixed;
-    width: 100%;
     top: 0;
+    width: 100%;
+    background-color: black;
     z-index: 1000;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    margin: 0 20px;
+    position: relative;
 }
 
 nav ul li a {
-    color: white;
+    color: orange;
     text-decoration: none;
+    font-weight: bold;
 }
 
-main {
-    padding: 20px;
+nav ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: black;
+    border: 1px solid orange;
+    list-style: none;
+    padding: 0;
+    min-width: 200px;
 }
 
-.profile h3, .profile p {
-    margin: 5px 0;
+nav ul li .dropdown-content li {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
 }
 
-section {
-    margin-bottom: 40px;
+nav ul li .dropdown-content li:hover {
+    background-color: #444;
 }
 
-h2 {
-    border-bottom: 2px solid #333;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+nav ul li:hover .dropdown-content {
+    display: block;
 }
 
-ul {
-    list-style-type: disc;
-    margin-left: 20px;
+.dropdown-content span.preview {
+    float: right;
+}
+
+.main-nav {
+    padding: 20px 0;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.image-container .image2 {
+    opacity: 0;
+}
+
+.image-container:hover .image1 {
+    opacity: 0;
+}
+
+.image-container:hover .image2 {
+    opacity: 1;
 }
 
 footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
     position: fixed;
     bottom: 0;
     width: 100%;
+    background-color: black;
+    text-align: center;
+    padding: 10px 0;
+    color: orange;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/* Плавное уменьшение изображения при прокрутке */
+.image-container.scroll {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.image-container.scroll img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Фиксированная нижняя плашка */
+.sticky-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    padding: 10px 0;
+    color: orange;
+    transition: all 0.5s ease-in-out;
 }

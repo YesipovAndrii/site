@@ -68,7 +68,7 @@ nav ul li:hover .dropdown-content {
 
 .image-container {
     position: relative;
-    width: 100%;
+    width: auto;
     height: 100vh; /* Изображение по высоте экрана */
     overflow: hidden;
 }

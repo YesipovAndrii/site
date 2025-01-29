@@ -1,33 +1,43 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Архитектурное Портфолио</title>
+    <title>Home</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Мое Архитектурное Портфолио</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="about.html">О себе</a></li>
-                <li><a href="projects.html">Проекты</a></li>
-                <li><a href="contact.html">Контакты</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Content</a>
+                    <ul class="dropdown-content">
+                        <li><span>1.</span> Academic works<span class="preview">Preview</span></li>
+                        <li><span>2.</span> Works as menthor<span class="preview">Preview</span></li>
+                        <li><span>3.</span> Freelance<span class="preview">Preview</span></li>
+                        <li><span>4.</span> Photography<span class="preview">Preview</span></li>
+                        <li><span>5.</span> Paintings<span class="preview">Preview</span></li>
+                        <li><span>6.</span> Layouts<span class="preview">Preview</span></li>
+                        <li><span>7.</span> Scientific works<span class="preview">Preview</span></li>
+                    </ul>
+                </li>
+                <li><a href="me.html">Me</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="welcome">
-            <h2>Добро пожаловать в мое портфолио</h2>
-            <p>Здесь вы можете увидеть мои лучшие работы в области архитектуры.</p>
-        </section>
+        <div class="image-container">
+            <img src="images/image1.jpg" alt="Image 1" class="image1">
+            <img src="images/image2.jpg" alt="Image 2" class="image2">
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2023 Мое Архитектурное Портфолио</p>
+        <p>Contact: +380661254895 | yesipov.andrii@gmail.com</p>
     </footer>
 
     <script src="scripts.js"></script>

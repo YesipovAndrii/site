@@ -69,7 +69,7 @@ nav ul li:hover .dropdown-content {
 .image-container {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 100vh; /* Изображение по высоте экрана */
     overflow: hidden;
 }
 
@@ -77,8 +77,8 @@ nav ul li:hover .dropdown-content {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: auto; /* Автоматическая ширина */
+    height: 100%; /* Высота по высоте контейнера */
     object-fit: cover;
     transition: opacity 0.5s ease-in-out;
 }
@@ -93,6 +93,10 @@ nav ul li:hover .dropdown-content {
 
 .image-container:hover .image2 {
     opacity: 1;
+}
+
+.empty-space {
+    height: 100vh; /* Пустое пространство по высоте экрана */
 }
 
 footer {

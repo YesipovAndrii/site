@@ -32,21 +32,23 @@ main {
     padding: 20px;
 }
 
-.project-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+.profile h3, .profile p {
+    margin: 5px 0;
 }
 
-.project-item {
-    width: calc(33.333% - 20px);
-    box-sizing: border-box;
+section {
+    margin-bottom: 40px;
 }
 
-.project-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
+h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
 }
 
 footer {
@@ -57,34 +59,4 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-}
-
-form {
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-form label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-form button {
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-form button:hover {
-    background-color: #555;
 }

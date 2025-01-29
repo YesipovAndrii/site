@@ -1,32 +1,21 @@
-// Пример простой анимации при скролле
 document.addEventListener('DOMContentLoaded', function() {
-    const projectItems = document.querySelectorAll('.project-item');
+    const imageContainer = document.querySelector('.image-container');
+    const homeLink = document.createElement('a');
+    homeLink.href = 'index.html';
+    imageContainer.appendChild(homeLink);
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate');
-            } else {
-                entry.target.classList.remove('animate');
-            }
-        });
-    }, { threshold: 0.5 });
-
-    projectItems.forEach(item => {
-        observer.observe(item);
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 0) {
+            imageContainer.classList.add('scroll');
+            document.querySelector('footer').classList.add('sticky-footer');
+        } else {
+            imageContainer.classList.remove('scroll');
+            document.querySelector('footer').classList.remove('sticky-footer');
+        }
     });
-});
 
-// Пример анимации кнопки отправки формы
-document.querySelector('button[type="submit"]').addEventListener('click', function(event) {
-    event.preventDefault();
-    
-    this.textContent = 'Отправляется...';
-    this.disabled = true;
-
-    setTimeout(() => {
-        alert('Форма отправлена!');
-        this.textContent = 'Отправить сообщение';
-        this.disabled = false;
-    }, 2000);
+    homeLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
 });

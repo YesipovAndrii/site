@@ -8,5 +8,5 @@ document.addEventListener('DOMContentLoaded', function() {
         carouselImages[currentIndex].classList.add('active');
     }
 
-    setInterval(showNextImage, 5000); // Смена изображений каждые 5 секунд
+    setInterval(showNextImage, 50); // Смена изображений каждые 5 секунд
 });

@@ -45,11 +45,6 @@ header {
     position: relative; /* Навигация относительно документа */
 }
 
-.fixed-navbar {
-    position: fixed; /* Закрепляем плашку сверху */
-    top: 0;
-}
-
 .sticky-navbar {
     position: fixed; /* Закрепляем плашку сверху */
     top: 0;

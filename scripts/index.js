@@ -20,7 +20,7 @@ function initSlideshow(slideshowContainer) {
             slideshowImages[currentIndex].classList.add('active');
         }
 
-        setInterval(showNextImage, 5000); // Смена изображений каждые 5 секунд
+        setInterval(showNextImage, 4000); // Смена изображений каждые 5 секунд
     }
 }
 

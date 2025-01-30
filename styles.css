@@ -42,11 +42,20 @@ header {
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 100%;
+    position: relative; /* Навигация относительно документа */
 }
 
 .fixed-navbar {
     position: fixed; /* Закрепляем плашку сверху */
     top: 0;
+}
+
+.sticky-navbar {
+    position: fixed; /* Закрепляем плашку сверху */
+    top: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar ul {
@@ -90,13 +99,5 @@ footer .contact {
 }
 
 #content {
-    padding: 40px;
-}
-
-.sticky-navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 80px 40px 40px 40px; /* Отступ сверху для фиксированной навигации */
 }
